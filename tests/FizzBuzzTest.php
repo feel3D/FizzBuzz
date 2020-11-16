@@ -12,20 +12,17 @@ class FizzBuzzTest extends TestCase
 {
 
     protected $fixture;
-
-
+    
     protected function setUp(): void
     {
         $this->fixture = new FizzBuzz;
     }
-
-
+    
     public function testObjectNotNull()
     {
         $this->assertNotNull($this->fixture);
     }
-
-
+    
     /**
      * @depends testObjectNotNull
      */
@@ -34,10 +31,8 @@ class FizzBuzzTest extends TestCase
         $this->assertObjectHasAttribute('start', $this->fixture);
         $this->assertObjectHasAttribute('finish', $this->fixture);
         $this->assertObjectHasAttribute('content', $this->fixture);
-
     }
-
-
+    
     /**
      * @depends                 testObjectAttributes
      * @expectedException       InvalidArgumentException
@@ -47,8 +42,7 @@ class FizzBuzzTest extends TestCase
     {
         $this->fixture->setStart(null);
     }
-
-
+    
     /**
      * @depends                 testObjectAttributes
      * @expectedException       InvalidArgumentException
@@ -58,8 +52,7 @@ class FizzBuzzTest extends TestCase
     {
         $this->fixture->setStart(0);
     }
-
-
+    
     /**
      * @depends                 testObjectAttributes
      * @expectedException       InvalidArgumentException
@@ -69,8 +62,7 @@ class FizzBuzzTest extends TestCase
     {
         $this->fixture->setStart('START');
     }
-
-
+    
     /**
      * @depends                 testObjectAttributes
      * @expectedException       InvalidArgumentException
@@ -80,8 +72,7 @@ class FizzBuzzTest extends TestCase
     {
         $this->fixture->setStart('1');
     }
-
-
+    
     /**
      * @depends                 testObjectAttributes
      * @expectedException       InvalidArgumentException
@@ -91,8 +82,7 @@ class FizzBuzzTest extends TestCase
     {
         $this->fixture->setStart(-3);
     }
-
-
+    
     /**
      * @depends                 testObjectAttributes
      * @expectedException       InvalidArgumentException
@@ -102,8 +92,7 @@ class FizzBuzzTest extends TestCase
     {
         $this->fixture->setStart(1500);
     }
-
-
+    
     /**
      * @depends                 testObjectAttributes
      * @expectedException       InvalidArgumentException
@@ -113,8 +102,7 @@ class FizzBuzzTest extends TestCase
     {
         $this->fixture->setFinish(null);
     }
-
-
+    
     /**
      * @depends                 testObjectAttributes
      * @expectedException       InvalidArgumentException
@@ -124,8 +112,7 @@ class FizzBuzzTest extends TestCase
     {
         $this->fixture->setFinish(0);
     }
-
-
+    
     /**
      * @depends                 testObjectAttributes
      * @expectedException       InvalidArgumentException
@@ -135,8 +122,7 @@ class FizzBuzzTest extends TestCase
     {
         $this->fixture->setFinish('FINISH');
     }
-
-
+    
     /**
      * @depends                 testObjectAttributes
      * @expectedException       InvalidArgumentException
@@ -146,8 +132,7 @@ class FizzBuzzTest extends TestCase
     {
         $this->fixture->setFinish('100');
     }
-
-
+    
     /**
      * @depends                 testObjectAttributes
      * @expectedException       InvalidArgumentException
@@ -157,8 +142,7 @@ class FizzBuzzTest extends TestCase
     {
         $this->fixture->setFinish(-1);
     }
-
-
+    
     /**
      * @depends                 testObjectAttributes
      * @expectedException       InvalidArgumentException
@@ -168,7 +152,6 @@ class FizzBuzzTest extends TestCase
     {
         $this->fixture->setFinish(2000);
     }
-
 
     /**
      * @depends                 testObjectAttributes
@@ -181,7 +164,6 @@ class FizzBuzzTest extends TestCase
         $this->fixture->setFinish(25);
         $this->fixture->populateContent();
     }
-
 
     /**
      * @depends testObjectAttributes

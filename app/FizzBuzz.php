@@ -12,26 +12,22 @@ class FizzBuzz
     private $start;
     private $finish;
     private $content;
-
-
+    
     public function getStart()
     {
         return $this->start;
     }
-
-
+    
     public function getFinish()
     {
         return $this->finish;
     }
-
-
+    
     public function getContent()
     {
         return $this->content;
     }
-
-
+    
     public function setStart($integer)
     {
         if (empty($integer) || $integer < 0) {
@@ -48,8 +44,7 @@ class FizzBuzz
 
         $this->start = $integer;
     }
-
-
+    
     public function setFinish($integer)
     {
         if (empty($integer) || $integer < 0) {
@@ -66,8 +61,7 @@ class FizzBuzz
 
         $this->finish = $integer;
     }
-
-
+    
     public function populateContent()
     {
         if ($this->finish < $this->start) {
