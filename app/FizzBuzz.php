@@ -28,38 +28,38 @@ class FizzBuzz
         return $this->content;
     }
     
-    public function setStart($integer)
+    public function setStart($int)
     {
-        if (empty($integer) || $integer < 0) {
+        if (empty($int) || $int < 0) {
             throw new InvalidArgumentException('Начальное значение не может быть пустым или отрицательным');
         }
 
-        if (!is_int($integer)) {
+        if (!is_int($int)) {
             throw new InvalidArgumentException('Начальное значение должно быть положительным и целочисленным');
         }
 
-        if ($integer > self::MAX) {
+        if ($int > self::MAX) {
             throw new InvalidArgumentException('Начальное значение не может быть больше максимального');
         }
 
-        $this->start = $integer;
+        $this->start = $int;
     }
     
-    public function setFinish($integer)
+    public function setFinish($int)
     {
-        if (empty($integer) || $integer < 0) {
+        if (empty($int) || $int < 0) {
             throw new InvalidArgumentException('Конечное значение не может быть пустым или отрицательным');
         }
 
-        if (!is_int($integer)) {
+        if (!is_int($int)) {
             throw new InvalidArgumentException('Конечное значение должно быть положительным и целочисленным');
         }
 
-        if ($integer > self::MAX) {
+        if ($int > self::MAX) {
             throw new InvalidArgumentException('Конечное значение не может быть больше максимального');
         }
 
-        $this->finish = $integer;
+        $this->finish = $int;
     }
     
     public function populateContent()
